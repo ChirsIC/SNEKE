@@ -48,7 +48,7 @@ continue_rect.center = (WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2 + 64)
 pick_up_sound = pygame.mixer.Sound("pick_up_sound.wav")
 # Set images (in this case, use simple rects...so just create their coordinates)
 # For a rectangle you need (top-left x, top-left y, width, height)
-apple_coord = (500, 500, SNAKE_SIZE, SNAKE_SIZE)
+apple_coord = (random.randint(0, 580), random.randint(0, 580), SNAKE_SIZE, SNAKE_SIZE)
 apple_rect = pygame.draw.rect(display_surface, RED, apple_coord)
 
 head_coord = (head_x, head_y, SNAKE_SIZE, SNAKE_SIZE)
@@ -73,14 +73,17 @@ while running:
     # Check for collisions
 
     # Update HUD
-
+    score_text = font.render(f"Score: {score}", True, RED, DARKRED)
     # Fill the surface
-
+    display_surface.fill(WHITE)
     # Blit HUD
-
+    display_surface.blit(title_text, title_rect)
+    display_surface.blit(score_text, score_rect)
     # Blit assets
-
+    pygame.draw.rect(display_surface, GREEN, head_coord)
+    pygame.draw.rect(display_surface, RED, apple_coord)
     # Update display and tick clock
-
+    pygame.display.update()
+    clock.tick(FPS)
 # End the game
 pygame.quit()
