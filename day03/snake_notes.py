@@ -127,7 +127,7 @@ while running:
     1. Now we update the display by calling pygame.display's update function passing in no arguments.
     
     2. The while loop we are in is super fast.  We actually need to slow it down to our FPS of 20 seconds.  
-    That's what our clock variable will do for us.  What until 20 frames have passed every second.  Then continue.  
+    That's what our clock variable will do for us.  What until 20 frames/second have passed every second.  Then continue.  
     This is ticking the clock.   
     to tick the clock call the clock object's tick function passing in FPS
     '''
