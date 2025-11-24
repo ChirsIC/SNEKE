@@ -11,7 +11,7 @@ pygame.display.set_caption("~~SNEKE~~")
 
 # Set FSP and clock
 clock = pygame.time.Clock()
-FPS = 20
+FPS = 10
 # Set game values
 SNAKE_SIZE = 20
 head_x = WINDOW_WIDTH / 2
@@ -22,10 +22,12 @@ snake_dy = 0
 score = 0
 # Set colors
 GREEN = (0, 255, 0)
-DARKGREEN = (10, 50, 10)
+DARKGREEN = (10, 50, 10) #10, 50, 10
 RED = (255, 0, 0)
 DARKRED = (150, 0, 0)
 WHITE = (255, 255, 255)
+PURPLE = (97, 5, 150)
+BLUE = (33, 126, 255)
 # Set fonts
 font = pygame.font.SysFont("gabriola", 48, True)
 # Set text
@@ -126,9 +128,9 @@ while running:
     # Blit assets
 
     for body in body_coords:
-        pygame.draw.rect(display_surface, DARKGREEN, body)
+        pygame.draw.rect(display_surface, BLUE, body)
     head_rect = pygame.draw.rect(display_surface, GREEN, head_coord)
-    apple_rect = pygame.draw.rect(display_surface, RED, apple_coord)
+    apple_rect = pygame.draw.rect(display_surface, PURPLE, apple_coord)
     # Update display and tick clock
     pygame.display.update()
     clock.tick(FPS)
