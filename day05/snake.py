@@ -11,7 +11,7 @@ pygame.display.set_caption("~~SNEKE~~")
 
 # Set FSP and clock
 clock = pygame.time.Clock()
-FPS = 10
+FPS = 20
 # Set game values
 SNAKE_SIZE = 20
 head_x = WINDOW_WIDTH / 2
@@ -23,8 +23,8 @@ score = 0
 # Set colors
 GREEN = (0, 255, 0)
 DARKGREEN = (10, 50, 10) #10, 50, 10
-RED = (255, 0, 0)
-DARKRED = (150, 0, 0)
+RED = (150, 0, 100) #255, 0, 0
+DARKRED = (51, 31, 17) #150, 0, 0
 WHITE = (255, 255, 255)
 PURPLE = (97, 5, 150)
 BLUE = (33, 126, 255)
